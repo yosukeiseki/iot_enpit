@@ -1,7 +1,9 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 get '/' do
- "Hello World!"
+ @title = "Hello World!"
+ erb :index
 end
 
 get '/AIIT' do
