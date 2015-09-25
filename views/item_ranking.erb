@@ -3,11 +3,13 @@
   <h1>日本酒ランキング</h1>
     <table class="table table-hover">
       <tr>
+        <th>ランキング</th>
         <th>商品名</th>
         <th>値段</th>
       </tr>
       <% @rankings.each do |ranking| %>            
-      <tr>            
+      <tr>
+        <td><%= ranking.rank %></td>            
         <td><%= ranking.name %></td>
         <td><%= ranking.price %></td>
       </tr>
