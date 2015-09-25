@@ -11,7 +11,7 @@ get '/' do
     c.affiliate_id = ENV["AFID"] 
   end 
 
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337, :sex => 0) 
+   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337) 
    erb :item_ranking 
 end 
 
