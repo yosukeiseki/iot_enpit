@@ -21,7 +21,7 @@ get '/man' do
     c.affiliate_id = ENV["AFID"] 
   end 
 
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337;:sex => 0) 
+   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337, :sex => 0) 
    erb :item_ranking 
 end 
 
@@ -31,6 +31,6 @@ get '/woman' do
     c.affiliate_id = ENV["AFID"] 
   end 
 
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337;:sex => 1) 
+   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337, :sex => 1) 
    erb :item_ranking 
 end 
