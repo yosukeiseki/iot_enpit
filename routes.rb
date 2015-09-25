@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
   root 'top#index'
-  get 'top/'
+  get 'top/item_ranking'
