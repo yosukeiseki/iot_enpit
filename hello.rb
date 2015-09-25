@@ -6,8 +6,8 @@ require 'rakuten_web_service'
 
 get '/' do
   RakutenWebService.configuration do |c|
-    c.application_id = ENV["APPID"]
-    c.affiliate_id = ENV["AFID"]
+    c.application_id = 1038224467908657119
+    c.affiliate_id = "145c3657.d691dece.145c3658.016c6745"
   end
 
   # Use genre id to fetch genre object
