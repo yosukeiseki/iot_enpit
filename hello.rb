@@ -11,6 +11,6 @@ get '/' do
   end
 
   # Use genre id to fetch genre object
-  @rankings = RakutenWebService::Ichiba::Genre[100337].ranking
+  @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337) 
   erb :item_ranking
 end
