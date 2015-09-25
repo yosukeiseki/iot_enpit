@@ -1,0 +1,2 @@
+XCsource 'https://rubygems.org'
+gem 'sinatra'
