@@ -1,36 +1,14 @@
-# -*- coding: utf-8 -*- 
-require 'sinatra' 
-require 'rakuten_web_service' 
-require 'rss' 
+# -*- coding: utf-8 -*-
+require 'sinatra'
+#require 'sinatra/reloader'
 
-#参考: https://github.com/k2works/sinatra_rakuten_api 
+#URL / でアクセス
+get '/' do
+  erb :views 
+end
 
-get '/' do 
-  RakutenWebService.configuration do |c| 
-    c.application_id = ENV["APPID"] 
-    c.affiliate_id = ENV["AFID"] 
-  end 
-
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337) 
-   erb :item_ranking 
-end 
-
-get '/man' do 
-  RakutenWebService.configuration do |c| 
-    c.application_id = ENV["APPID"] 
-    c.affiliate_id = ENV["AFID"] 
-  end 
-
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337, :sex => 0) 
-   erb :item_ranking 
-end 
-
-get '/woman' do 
-  RakutenWebService.configuration do |c| 
-    c.application_id = ENV["APPID"] 
-    c.affiliate_id = ENV["AFID"] 
-  end 
-
-   @rankings = RakutenWebService::Ichiba::Item.ranking(:genreId => 100337, :sex => 1) 
-   erb :item_ranking 
-end 
+#URL /hoge でアクセス
+get '/hoge' do
+  @content = "main content"
+  erb :hoge,:locals => {:content => content}
+end
